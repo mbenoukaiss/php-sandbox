@@ -1,0 +1,18 @@
+{
+  "name": "php-sandbox",
+  "version": "1.0.0",
+  "repository": "https://github.com/mbenoukaiss/php-sandbox.git",
+  "author": "Marwane <marwane.benoukaiss@wiilog.fr>",
+  "license": "MIT",
+  "scripts": {
+    "watch": "webpack --watch"
+  },
+  "dependencies": {
+    "cash-dom": "^8.1.1",
+    "prismjs": "^1.27.0"
+  },
+  "devDependencies": {
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2"
+  }
+}

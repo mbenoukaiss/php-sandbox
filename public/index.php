@@ -18,8 +18,7 @@ class Route {
 }
 
 $loader = new FilesystemLoader("../templates");
-$twig = new Environment($loader, [
-]);
+$twig = new Environment($loader);
 
 $routes = [];
 

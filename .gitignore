@@ -1,4 +1,5 @@
 /.idea/
-/sandbox/
+/node_modules/
+/build/
 /var/
 /vendor/

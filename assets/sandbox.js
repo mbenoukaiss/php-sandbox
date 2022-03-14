@@ -1,3 +1,6 @@
+import $ from 'cash-dom';
+import {createEditor} from "./editor";
+
 const $editor = $(`#editor`);
 const $output = $(`#output`);
 const $outputParent = $(`.parent-content`);
@@ -20,7 +23,7 @@ function run() {
 }
 
 function toggleLoaders(show = true) {
-    const LOADER = `<div class="loader"><img src="/assets/loading.png" alt="Loading"></div>`;
+    const LOADER = `<div class="loader"><img src="/assets/images/loading.png" alt="Loading"></div>`;
 
     if(show) {
         $editor.append(LOADER);

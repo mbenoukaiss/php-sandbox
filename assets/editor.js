@@ -1,4 +1,6 @@
-function createEditor($element) {
+import Prism from 'prismjs/prism';
+
+export function createEditor($element) {
     const code = localStorage.getItem(`content`) ?? ``;
     $element.append(`<code class="language-php" contenteditable="plaintext-only" spellcheck="false">${code}</code>`);
 

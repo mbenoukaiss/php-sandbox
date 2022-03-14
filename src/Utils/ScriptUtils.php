@@ -4,7 +4,7 @@ namespace App\Utils;
 
 class ScriptUtils {
 
-    const SANDBOX_DIRECTORY = "../sandbox/";
+    const SANDBOX_DIRECTORY = "../build/sandbox/";
     const ONE_MINUTE = 60;
     const PHP_HEADER = "<?php\n\n";
 
