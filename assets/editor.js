@@ -1,6 +1,6 @@
 function createEditor($element, runCallback) {
-    const DEFAULT_CODE = ``;
-    $element.append(`<code class="language-php" contenteditable="plaintext-only" spellcheck="false">${DEFAULT_CODE}</code>`);
+    const code = localStorage.getItem(`content`) ?? ``;
+    $element.append(`<code class="language-php" contenteditable="plaintext-only" spellcheck="false">${code}</code>`);
 
     const $code = $element.find(`code`);
     $code.on('input', function () {
@@ -10,13 +10,17 @@ function createEditor($element, runCallback) {
     })
 
     fixTabulations($element);
-    placeCaretAtEnd($code);
+    focusElement($code);
 
     $element.on(`keydown`, event => {
         if (event.key === `Enter` && event.ctrlKey) {
             runCallback();
         }
-    })
+    });
+
+    $element.on(`keydown`, () => {
+        localStorage.setItem(`content`, $code.text());
+    });
 }
 
 function saveCaretPosition(context) {
@@ -52,7 +56,7 @@ function getTextNodeAtPosition(root, index) {
     };
 }
 
-function placeCaretAtEnd($element) {
+function focusElement($element) {
     setTimeout(() => {
         $element[0].focus();
 
