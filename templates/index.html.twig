@@ -1,5 +1,3 @@
-<?php require_once "error_reporting.php"; ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +7,7 @@
     <title>PHP Sandbox</title>
 
     <link rel="icon" type="image/png" href="/icon.png">
-    <link rel="stylesheet" href="../assets/style/main.css">
+    <link rel="stylesheet" href="/assets/style/main.css">
 </head>
 <body class="line-numbers">
 <header>
@@ -26,9 +24,9 @@
         <div id="output" class="content"><i>No output</i></div>
 
         <div class="details">
-            <b>PHP version :</b> <?php echo phpversion() ?><br>
-            <b>Error reporting :</b> <?php echo join(", ", getReportedErrors()); ?><br>
-            <b>Loaded extensions :</b> <?php echo strtolower(join(", ", get_loaded_extensions())); ?>
+            <b>PHP version :</b> {{ php_version }}<br>
+            <b>Error reporting :</b> {{ reported_errors | join(', ') }}<br>
+            <b>Loaded extensions :</b> {{ loaded_extensions | join(', ') | lower }}
         </div>
     </div>
 </main>
