@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #2a2b2d;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #555555;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #777777;
+}
+
+button {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    text-decoration: none;
+    transition: all 200ms ease-in;
+    color: #ffffff;
+    background-color: #1792e1;
+    font-size: 85%;
+    border: none;
+    border-radius: 2px;
+    padding: 10px 20px;
+}
+
+button:hover {
+    background-color: #36a9f3;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #222326;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.code-container {
+    display: flex;
+    flex-direction: column;
+    width: 45vw;
+    height: 95vh;
+    margin-right: 20px;
+}
+
+.run-code {
+    margin-top: 10px;
+    width: 100%;
+    font-weight: bold;
+}
+
+#editor, #output {
+    font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace;
+    background: #1d1f21;
+    padding: 16px;
+    border-radius: 4px;
+    color: white;
+}
+
+#editor {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    text-align: left;
+    overflow-y: auto;
+    flex: 1 1 auto;
+    white-space: pre-wrap;
+}
+
+#output {
+    width: 40vw;
+    height: 95vh;
+    border-radius: 4px;
+    overflow: auto;
+}
+
+.start-token {
+    margin-bottom: 1rem;
+}
+
+code[class*="language-"], pre[class*="language-"] {
+    color: #c5c8c6;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+    font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace;
+    direction: ltr;
+    text-align: left;
+    word-spacing: normal;
+    word-break: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+
+    outline: none;
+    flex: 1 1 auto;
+    white-space: pre-wrap;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+    border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    background: #1d1f21;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+    padding: .1em;
+    border-radius: .3em;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: #7C7C7C;
+}
+
+.token.punctuation {
+    color: #c5c8c6;
+}
+
+.namespace {
+    opacity: .7;
+}
+
+.token.property,
+.token.keyword,
+.token.tag {
+    color: #96CBFE;
+}
+
+.token.class-name {
+    color: #FFFFB6;
+    text-decoration: underline;
+}
+
+.token.boolean,
+.token.constant {
+    color: #99CC99;
+}
+
+.token.symbol,
+.token.deleted {
+    color: #f92672;
+}
+
+.token.number {
+    color: #FF73FD;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #A8FF60;
+}
+
+.token.variable {
+    color: #C6C5FE;
+}
+
+.token.operator {
+    color: #EDEDED;
+}
+
+.token.entity {
+    color: #FFFFB6;
+    cursor: help;
+}
+
+.token.url {
+    color: #96CBFE;
+}
+
+.language-css .token.string,
+.style .token.string {
+    color: #87C38A;
+}
+
+.token.atrule,
+.token.attr-value {
+    color: #F9EE98;
+}
+
+.token.function {
+    color: #DAD085;
+}
+
+.token.regex {
+    color: #E9C062;
+}
+
+.token.important {
+    color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+
+.token.italic {
+    font-style: italic;
+}
+
+.xdebug-error {
+    border-collapse: collapse;
+    font-size: 1rem;
+}
+
+.xdebug-error th, td {
+    border: 0;
+    padding: 7px;
+}
+
+.xdebug-error th {
+    background: #222326;
+}
+
+.xdebug-error td {
+    background: #28292c;
+}
+
+.xdebug-error font[color="#00bb00"] {
+    font-size: 0.8rem;
+}
+
+.xdebug-error th span {
+    display: inline-block;
+    color: white !important;
+    font-size: 0.9rem !important;
+    border-radius: 3px;
+    padding: 3px 5px;
+    letter-spacing: -1px;
+}
