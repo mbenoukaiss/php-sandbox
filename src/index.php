@@ -1,3 +1,5 @@
+<?php require_once "error_reporting.php"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,6 +27,7 @@
 
         <div class="details">
             <b>PHP version :</b> <?php echo phpversion() ?><br>
+            <b>Error reporting :</b> <?php echo join(", ", getReportedErrors()); ?><br>
             <b>Loaded extensions :</b> <?php echo strtolower(join(", ", get_loaded_extensions())); ?>
         </div>
     </div>
