@@ -1,6 +1,6 @@
 <?php
 
-const SANDBOX_DIRECTORY = "sandbox/";
+const SANDBOX_DIRECTORY = "../sandbox/";
 const ONE_MINUTE = 60;
 const PHP_HEADER = "<?php\n\n";
 
@@ -33,7 +33,7 @@ function removePreviousFiles() {
 }
 
 function createScript(string $content): string {
-    $file = SANDBOX_DIRECTORY . "/script-" . bin2hex(random_bytes(8)) . ".php";
+    $file = SANDBOX_DIRECTORY . "script-" . bin2hex(random_bytes(8)) . ".php";
 
     file_put_contents($file, PHP_HEADER . trim($content));
 

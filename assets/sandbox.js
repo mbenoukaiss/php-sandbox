@@ -6,9 +6,9 @@ function run() {
     const content = new FormData();
     content.append(`code`, $editor.find(`code`).text());
 
-    fetch(`/parse.php`, {method: `POST`, body: content})
+    fetch(`src/parse.php`, {method: `POST`, body: content})
         .then(res => res.text())
-        .then(url => fetch(url)
+        .then(script => fetch(script)
             .then(res => res.text())
             .then(output => $output.html(output && output.length ? output : `<i>No output</i>`)))
 }

@@ -44,6 +44,7 @@ html, body {
     margin: 0;
     padding: 0;
     background: #222326;
+    font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace;
 }
 
 main {
@@ -52,6 +53,10 @@ main {
     justify-content: center;
     align-items: center;
     height: 100vh;
+}
+
+main > * {
+    height: 95vh;
 }
 
 .code-container {
@@ -68,12 +73,19 @@ main {
     font-weight: bold;
 }
 
-#editor, #output {
-    font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace;
+.content {
     background: #1d1f21;
     padding: 16px;
     border-radius: 4px;
     color: white;
+}
+
+.content.parent-content {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    background: #232526;
+    width: 40vw;
 }
 
 #editor {
@@ -87,10 +99,17 @@ main {
 }
 
 #output {
-    width: 40vw;
-    height: 95vh;
+    flex: 1 1 auto;
     border-radius: 4px;
     overflow: auto;
+}
+
+.details {
+    padding: 10px;
+    color: #d0d0d0;
+    font-size: 0.9rem;
+    max-height: 100px;
+    overflow-y: auto;
 }
 
 .start-token {
