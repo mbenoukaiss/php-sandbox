@@ -12,7 +12,7 @@ class IndexController {
     #[Route("/")]
     public static function index(Environment $twig): string {
         return $twig->load("index.html.twig")->render([
-            "php_version" => $_SERVER["REQUEST_URI"],
+            "php_version" => phpversion(),
             "reported_errors" => ErrorUtils::getReportedErrors(),
             "loaded_extensions" => get_loaded_extensions(),
         ]);
