@@ -20,7 +20,7 @@ function run() {
 }
 
 function toggleLoaders(show = true) {
-    const LOADER = `<div class="loader"><img src="/assets/loading.png"></div>`;
+    const LOADER = `<div class="loader"><img src="/assets/loading.png" alt="Loading"></div>`;
 
     if(show) {
         $editor.append(LOADER);
@@ -36,4 +36,11 @@ function toggleLoaders(show = true) {
 }
 
 $run.on(`click`, run);
-createEditor($editor, run);
+
+$(document).on(`keydown`, event => {
+    if (event.key === `Enter` && event.ctrlKey) {
+        run();
+    }
+});
+
+createEditor($editor);

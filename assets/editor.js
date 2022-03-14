@@ -1,4 +1,4 @@
-function createEditor($element, runCallback) {
+function createEditor($element) {
     const code = localStorage.getItem(`content`) ?? ``;
     $element.append(`<code class="language-php" contenteditable="plaintext-only" spellcheck="false">${code}</code>`);
 
@@ -11,12 +11,6 @@ function createEditor($element, runCallback) {
 
     fixTabulations($element);
     focusElement($code);
-
-    $element.on(`keydown`, event => {
-        if (event.key === `Enter` && event.ctrlKey) {
-            runCallback();
-        }
-    });
 
     $element.on(`keydown`, () => {
         localStorage.setItem(`content`, $code.text());
