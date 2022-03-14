@@ -14,7 +14,7 @@ function run() {
         .then(script => fetch(script)
             .then(res => res.text())
             .then(output => {
-                $output.html(output && output.length ? output : `<i>No output</i>`);
+                $output.html(output && output.length ? output.replace(/^<br ?\/?>/g, '') : `<i>No output</i>`);
                 toggleLoaders(false);
             }))
 }
