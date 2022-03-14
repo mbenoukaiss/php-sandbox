@@ -19,7 +19,6 @@ class Route {
 
 $loader = new FilesystemLoader("../templates");
 $twig = new Environment($loader, [
-    "cache" => "../var/cache",
 ]);
 
 $routes = [];
