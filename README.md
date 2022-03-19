@@ -1,5 +1,5 @@
 # PHP Sandbox
-Provides a local tool that allows testing PHP features without any 
+Tool that allows testing PHP features **locally** without any 
 restrictions on filesystem, system or network functions that 
 online tools such as https://sandbox.onlinephpfunctions.com/ have. 
 
@@ -36,4 +36,9 @@ that contains the `www` folder (usually `/var`) :
 Restart your Apache services and run the following command to load dependencies :
 ```shell
 composer install
+yarn install && yarn build
 ```
+
+TODO:
+Terminal with configurable default folder (default to sandbox script)
+Dotenv : error level, maximum execution time

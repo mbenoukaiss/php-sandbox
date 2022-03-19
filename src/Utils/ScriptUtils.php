@@ -37,11 +37,13 @@ class ScriptUtils {
     }
 
     public static function createScript(string $content): string {
-        $file = self::SANDBOX_DIRECTORY . "script-" . round(microtime(true) * 1000) . ".php";
+        $directory = "script-" . round(microtime(true) * 1000);
+        mkdir(self::SANDBOX_DIRECTORY . $directory);
 
+        $file = self::SANDBOX_DIRECTORY . "$directory/script.php";
         file_put_contents($file, self::PHP_HEADER . trim($content));
 
-        return $file;
+        return ltrim($directory, "./");
     }
 
 }

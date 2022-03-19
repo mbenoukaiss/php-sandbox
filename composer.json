@@ -2,7 +2,8 @@
     "name": "mbenoukaiss/sandbox",
     "type": "project",
     "require": {
-        "twig/twig": "^3.3"
+        "twig/twig": "^3.3",
+        "symfony/dotenv": "^6.0"
     },
     "license": "MIT",
     "autoload": {

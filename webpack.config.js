@@ -1,10 +1,9 @@
 const path = require(`path`);
 
 module.exports = {
-    entry: `./assets/index.js`,
-    mode: "development",
+    entry: `./assets/app.js`,
     output: {
-        filename: `main.js`,
+        filename: `app.js`,
         path: path.resolve(__dirname, `build/webpack`),
     },
 };

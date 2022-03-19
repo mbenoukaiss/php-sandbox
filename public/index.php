@@ -3,8 +3,12 @@
 use App\Controllers\IndexController;
 use Twig\Environment;
 use Twig\Loader\FilesystemLoader;
+use Symfony\Component\Dotenv\Dotenv;
 
 require_once "../vendor/autoload.php";
+
+$dotenv = new Dotenv();
+$dotenv->loadEnv(__DIR__ . "/../.env");
 
 const CONTROLLERS = [
     IndexController::class,
@@ -38,8 +42,9 @@ foreach (CONTROLLERS as $controller) {
 
 }
 
-if (isset($routes[$_SERVER["REQUEST_URI"]])) {
-    echo $routes[$_SERVER["REQUEST_URI"]]($twig);
+$route = explode("?", $_SERVER["REQUEST_URI"])[0];
+if (isset($routes[$route])) {
+    echo $routes[$route]($twig);
 } else {
     echo "Page not found `{$_SERVER["REQUEST_URI"]}`";
 }

@@ -14,23 +14,26 @@
 </header>
 
 <main>
-    <div class="code-container">
+    <div class="content parent-content code-container">
         <div id="editor" class="content">
             <span class="start-token token delimiter important">&lt;?php</span>
         </div>
-        <button class="run-code">Run</button>
-    </div>
-    <div class="content parent-content">
-        <div id="output" class="content"><i>No output</i></div>
-
         <div class="details">
             <b>PHP version :</b> {{ php_version }}<br>
             <b>Error reporting :</b> {{ reported_errors | join(', ') }}<br>
             <b>Loaded extensions :</b> {{ loaded_extensions | join(', ') | lower }}
         </div>
     </div>
+    <div class="content parent-content output-container">
+        <div class="details execution-time">Press <b>Ctrl + Enter</b> to run the script</div>
+        <div class="content output"><i>No output</i></div>
+        <div class="content console">
+            <div class="title">Console</div>
+            <div class="console-content">Run a script to get access to the console</div>
+        </div>
+    </div>
 </main>
 
-<script src="/build/webpack/main.js"></script>
+<script src="/build/webpack/app.js"></script>
 </body>
 </html>

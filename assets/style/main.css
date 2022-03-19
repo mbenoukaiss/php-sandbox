@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
-* {
-    box-sizing: border-box;
-}
-
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -59,20 +55,6 @@ main > * {
     height: 95vh;
 }
 
-.code-container {
-    display: flex;
-    flex-direction: column;
-    width: 45vw;
-    height: 95vh;
-    margin-right: 20px;
-}
-
-.run-code {
-    margin-top: 10px;
-    width: 100%;
-    font-weight: bold;
-}
-
 .content {
     position: relative;
     background: #1d1f21;
@@ -86,6 +68,17 @@ main > * {
     flex-direction: column;
     padding: 0;
     background: #232526;
+}
+
+.code-container {
+    display: flex;
+    flex-direction: column;
+    width: 45vw;
+    height: 95vh;
+    margin-right: 20px;
+}
+
+.output-container {
     width: 40vw;
 }
 
@@ -99,10 +92,47 @@ main > * {
     white-space: pre-wrap;
 }
 
-#output {
+.output {
     flex: 1 1 auto;
-    border-radius: 4px;
     overflow: auto;
+}
+
+.console {
+    background: #141517;
+    border-radius: 4px;
+    overflow-y: auto;
+    font-size: 0.9em;
+}
+
+.console .title {
+    font-weight: bold;
+    margin-bottom: 0.75em;
+}
+
+.console .console-content {
+    height: 8em;
+}
+
+.console .console-content textarea {
+    background: none;
+    border: none;
+    border-radius: 0;
+    resize: none;
+    width: 100%;
+    outline: none;
+    height: auto;
+    padding: 0;
+    overflow-y: hidden;
+    color: white;
+}
+.current-console-line {
+    display: inline-block;
+    margin-top: 3px;
+}
+
+[contenteditable] {
+    outline: none;
+    white-space: pre-wrap;
 }
 
 .loader {
@@ -158,9 +188,7 @@ code[class*="language-"], pre[class*="language-"] {
     -ms-hyphens: none;
     hyphens: none;
 
-    outline: none;
     flex: 1 1 auto;
-    white-space: pre-wrap;
 }
 
 /* Code blocks */

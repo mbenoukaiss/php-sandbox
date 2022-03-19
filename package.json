@@ -5,7 +5,8 @@
   "author": "Marwane <marwane.benoukaiss@wiilog.fr>",
   "license": "MIT",
   "scripts": {
-    "watch": "webpack --watch"
+    "build": "webpack --mode=production",
+    "watch": "webpack --watch --mode=development"
   },
   "dependencies": {
     "cash-dom": "^8.1.1",
